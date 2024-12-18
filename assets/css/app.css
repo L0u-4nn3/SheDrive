@@ -1,87 +1,89 @@
 body {
-  margin: 0; /* pour éviter d'avoir une bordure blanche autour de notre contenu */
-  font-family: Arial, Helvetica, sans-serif; /* je choisi une font */
-}
+    margin: 0; /* pour éviter d'avoir une bordure blanche autour de notre contenu */
+    font-family: Arial, Helvetica, sans-serif; /* je choisi une font */
+  }
+  
+  header.header > a.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto; /* on centre le logo */
+  }
+  
+  header.header > a.logo > img {
+    width: 50%;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #4d4d4d;
+      background-color: #fff;
+  }
+  header {
+      background-color: #D4A5B0;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+  }
+  header img {
+      max-width: 50px;
+  }
+  .banniere {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f5f6;
+      padding: 100px;
+  }
+  .banniere h1 {
+      font-size: 2.5em;
+      color: #4d4d4d;
+  }
+  .banniere button {
+      background-color: #C79DA6;
+      color: white;
+      border: none;
+      padding: 10px 50px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+  }
+  .baniere img {
+      max-width: 40%;
+      border-radius: 8px;
+  }
 
-header.header > a.logo {
-  width: 150px;
-  display: block;
-  margin: 0 auto; /* on centre le logo */
-}
+  .what {
+    padding: 100px;
+  }
 
-header.header > a.logo > img {
-  width: 50%;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #4d4d4d;
-    background-color: #fff;
-}
-header {
-    background-color: #D4A5B0;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-header img {
-    max-width: 50px;
-}
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8f5f6;
-    padding: 40px;
-}
-.hero h1 {
-    font-size: 2.5em;
-    color: #4d4d4d;
-}
-.hero button {
-    background-color: #c69798;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-.hero img {
-    max-width: 40%;
-    border-radius: 8px;
-}
-.section {
-    padding: 40px 20px;
+  .know {
+    padding: 100px;
     text-align: center;
-}
-.section h2 {
-    color: #4d4d4d;
-    margin-bottom: 20px;
-}
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-.stats div {
-    background-color: #d4b5b6;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 200px;
-}
-.services {
+  }
+
+  .knows {
+    padding: 50px;
+  }
+
+  .service {
+    text-align: center;
+    padding: 100px;
+  }
+  .services {
     display: flex;
     gap: 20px;
     justify-content: center;
+    padding: 50px;
 }
 .services div {
     background-color: #f8f5f6;
@@ -90,74 +92,20 @@ header img {
     border-radius: 8px;
     max-width: 250px;
 }
-footer {
-    background-color: #A68585;
-    color: white;
+
+.etape {
+    padding: 100px;
     text-align: center;
-    padding: 20px;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-section h2 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #fff; /* Texte en blanc */
-}
-
-.footer-section p,
-.footer-section ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 14px;
-}
-
-.footer-section a {
-    text-decoration: none;
-    color: #e4e4e4; /* Gris clair */
-    transition: color 0.3s;
-}
-
-.footer-section a:hover {
-    color: #ffffff; /* Blanc au survol */
-    text-decoration: underline;
-}
-
-.icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-}
-
-.instagram {
-    background-image: url('instagram-icon.png'); /* Remplace par l'icône Instagram */
-}
-
-.facebook {
-    background-image: url('facebook-icon.png'); /* Remplace par l'icône Facebook */
-}
-
-
-
-
-
-
-/* Étapes */
 .step {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+}
+
+.steps {
+    padding: 50px;
 }
 
 .circle {
@@ -193,14 +141,70 @@ footer {
     text-align: left;
 }
 
-/* Flèche décorative */
-.arrow {
-    width: 100px;
-    height: 200px;
-    background: url('arrow.png') no-repeat center;
-    background-size: contain;
-    margin: 20px auto 0;
+.temoignages {
+    text-align: center;
+    padding: 80px;
 }
+
+.coordonnees {
+    text-align: center;
+    padding: 80px;
+}
+
+.coordonnee {
+    text-align: left;
+    padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #A68585;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff; /* Texte en blanc */
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #e4e4e4; /* Gris clair */
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ffffff; /* Blanc au survol */
+    text-decoration: underline;
+}  
 
 .copywrite {
     background-color: #e9bfbf;
@@ -209,5 +213,3 @@ footer {
     text-align: center;
     padding: 8px;
 }
-
-

@@ -1,0 +1,87 @@
+/**
+Theme Name: SheDrive theme
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4d4d4d;
+    background-color: #fff;
+}
+header {
+    background-color: #d4b5b6;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+header img {
+    max-width: 50px;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f5f6;
+    padding: 40px;
+}
+.hero h1 {
+    font-size: 2.5em;
+    color: #4d4d4d;
+}
+.hero button {
+    background-color: #c69798;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.hero img {
+    max-width: 40%;
+    border-radius: 8px;
+}
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.section h2 {
+    color: #4d4d4d;
+    margin-bottom: 20px;
+}
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.stats div {
+    background-color: #d4b5b6;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 200px;
+}
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.services div {
+    background-color: #f8f5f6;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 250px;
+}
+footer {
+    background-color: #d4b5b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

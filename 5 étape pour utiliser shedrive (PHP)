@@ -1,0 +1,112 @@
+<section class="timeline-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Rejoignez <span class="highlight">SheDrive</span> en 5 étapes :</h2>
+        <div class="row">
+            <!-- Ligne de temps (image) -->
+            <div class="col-lg-2 d-flex justify-content-center">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/5-etape.png" alt="Ligne de temps" class="timeline-image">
+            </div>
+            <!-- Texte des étapes -->
+            <div class="col-lg-6">
+                <div class="timeline-text">
+                    <!-- Étape 1 -->
+                    <div class="step-content">
+                        <h5>1. Inscription</h5>
+                        <p>Créez un compte en remplissant un formulaire avec vos informations personnelles et en téléchargeant une pièce d’identité. Ce processus garantit un accès sécurisé.</p>
+                    </div>
+                    <!-- Étape 2 -->
+                    <div class="step-content">
+                        <h5>2. Vérification d'identité</h5>
+                        <p>L'équipe SheDrive valide votre identité en quelques heures. Une fois approuvée, vous recevez un e-mail de confirmation pour activer votre compte.</p>
+                    </div>
+                    <!-- Étape 3 -->
+                    <div class="step-content">
+                        <h5>3. Connexion</h5>
+                        <p>Accédez à la plateforme avec votre e-mail et mot de passe pour commencer à utiliser nos services.</p>
+                    </div>
+                    <!-- Étape 4 -->
+                    <div class="step-content">
+                        <h5>4. Rechercher ou créer un trajet</h5>
+                        <p>
+                            • Trouvez un trajet en indiquant votre point de départ, destination, et horaire souhaité.<br>
+                            • Si vous êtes conductrice, proposez un trajet en partageant les détails de votre itinéraire.
+                        </p>
+                    </div>
+                    <!-- Étape 5 -->
+                    <div class="step-content">
+                        <h5>5. Organiser votre trajet</h5>
+                        <p>Utilisez la messagerie intégrée pour discuter avec les autres utilisateurs et finaliser les détails du voyage.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Illustration à droite -->
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ligne-courbe-etape.png" alt="Illustration" class="timeline-illustration">
+            </div>
+        </div>
+    </div>
+</section>
+/*CSS*/
+/* Titre */
+.timeline-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6D4C4C;
+}
+
+.timeline-section .highlight {
+    color: #C38989; /* Couleur rose pour "SheDrive" */
+}
+
+.timeline-section {
+    display: flex;
+    align-items: flex-start; /* Alignement des éléments en haut */
+    gap: 20px; /* Espacement entre la ligne de temps et le texte */
+}
+
+/* Ligne de temps (image) */
+.timeline-image {
+    width: 300px; /* Largeur fixe */
+    height: 800px; /* Hauteur fixe */
+    object-fit: contain; /* Ajuste l'image sans déformation */
+    display: block;
+}
+
+/* Texte des étapes */
+.timeline-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Répartit le texte pour qu'il corresponde à la ligne */
+    height: 800px; /* S'ajuste à la hauteur de la ligne de temps */
+    margin-left: 20px; /* Espacement entre la ligne de temps et le texte */
+}
+
+.timeline-text .step-content {
+    flex: 1; /* Répartit chaque étape de manière égale */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement le texte */
+}
+
+.timeline-text h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6D4C4C;
+    margin-bottom: 10px;
+}
+
+.timeline-text p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.timeline-illustration {
+    width: auto; /* Permet à la largeur de s'adapter */
+    max-width: 900px; /* Limite la largeur maximale */
+    height: auto; /* Garde les proportions de l'image */
+    max-height: 900px; /* Limite la hauteur maximale */
+    object-fit: contain; /* Ajuste l'image pour qu'elle reste proportionnelle */
+    margin: 0 auto; /* Centre l'image dans la colonne */
+    display: block; /* Assure un alignement correct */
+}
+

@@ -1,0 +1,49 @@
+/* Navbar */
+.custom-navbar {
+    background-color: #d8b1b6; /* Rose pâle */
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fcf1f1;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.dropdown-menu {
+    background-color: #d8b1b6;
+    border: none;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #b38f94;
+    color: #fff;
+}
+
+.navbar .nav-link img,
+.navbar-brand img {
+    filter: brightness(0) invert(1); /* Rend les icônes et le logo blancs */
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-link img:hover {
+    transform: scale(1.2); /* Effet de zoom */
+}

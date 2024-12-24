@@ -1,0 +1,362 @@
+/*HTML*/
+ <footer>
+        <!-- Section Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+              <h2>Inscrivez-vous à notre Newsletter</h2>
+              <p>Ne manquez rien ! Recevez les dernières infos et restez connectée avec la communauté SheDrive.</p>
+              <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Votre email" required>
+                <button type="submit" class="btn btn-newsletter">></button>
+              </form>
+            </div>
+          </section>
+  </div>
+</section>
+      <!-- Section Informations -->
+      <footer class="footer-info-section">
+        <div class="container">
+          <div class="footer-content d-flex justify-content-between align-items-start">
+            <!-- Logo -->
+            <div class="footer-logo-section">
+              <img src="logo-sitewebSD.png" alt="SheDrive Logo" class="footer-logo">
+              <p class="footer-rgpd">
+                <a href="/rgpd">Règlement RGPD et protection des données</a>
+              </p>
+            </div>
+      
+            <!-- Contact -->
+            <div class="footer-contact">
+              <h5>CONTACT</h5>
+              <p>support@shedrive.be</p>
+            </div>
+      
+            <!-- Service Client -->
+            <div class="footer-service">
+              <h5>SERVICE CLIENT</h5>
+              <p><a href="/contact">Contact</a></p>
+              <p><a href="/faq">Aide & FAQ</a></p>
+            </div>
+      
+            <!-- Réseaux sociaux -->
+            <div class="footer-reseaux">
+              <h5>RÉSEAUX</h5>
+              <div class="social-links">
+                <p>
+                  <a href="https://instagram.com/shedrive_be" target="_blank" class="d-flex align-items-center">
+                    <img src="icone - Instagram.png" alt="Instagram" class="social-icon">
+                    @shedrive_be
+                  </a>
+                </p>
+                <p>
+                  <a href="https://facebook.com/shedrive_fc" target="_blank" class="d-flex align-items-center">
+                    <img src="icone -Facebook.png" alt="Facebook" class="social-icon">
+                    @shedrive_fc
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+            <!-- Autres sections du footer -->
+            <div class="footer-info-section">
+              <div class="container">
+                <!-- Contenu du footer -->
+              </div>
+            </div>
+          
+        <!-- Mention Légale -->
+        <div class="footer-legal-section">
+            © SheDrive - Tous droits réservés.
+          </div>
+      </footer>
+
+/*CSS*/
+
+/* Section Newsletter */
+.newsletter-section {
+    background: url('footer - photo.png') center/cover no-repeat;
+    padding: 60px 20px;
+    position: relative; /* Pour inclure toute la section */
+    text-align: center !important;
+}
+
+.newsletter-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.newsletter-section p {
+    font-size: 1.2 rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.newsletter-form {
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    gap: 0px; /* Espacement entre le champ et le bouton */
+    max-width: 500px; /* Largeur maximum pour limiter */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+.input-group {
+    display:flex !important;
+    width: 100%; /* Assurez-vous que l'input-group prend bien toute la largeur */
+}
+.newsletter-input {
+    border: 1px solid #C38989;
+    border-radius: 25px 0 0 25px; /* Arrondi à gauche */
+    padding: 12px 15px;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.btn-newsletter {
+    background-color: #D8B1B6 !important;
+    border-radius: 0 25px 25px 0 !important; /* Arrondi à droite */
+    border: none;
+    color: white !important;
+    font-size: 1.2rem;
+    padding: 0 20px !important;
+    height: 49px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-newsletter:hover {
+    background-color: #C38989;
+    color: white !important; /* Assure que le ">" reste blanc au survol */
+}
+
+/* Section Informations */
+.footer-info-section {
+    background-color: #A68585; /* Couleur de fond */
+    padding: 20px 20px 0; /* Espacement général */
+    color: white; /* Texte blanc */
+    margin-bottom: 0; /* Évite un espace sous le footer */
+}
+
+/* Alignement général des colonnes */
+.footer-info-section .row {
+    display: flex;
+    justify-content: space-evenly; /* Espacement égal entre les colonnes */
+    align-items: flex-start; /* Aligne verticalement */
+}
+
+/* Uniformiser les hauteurs */
+.footer-contact, .footer-service, .footer-reseaux {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Égalise l'espace vertical entre les éléments */
+    align-items: center; /* Centre horizontalement */
+}
+
+/* Service Client */
+.footer-service p:last-child {
+    margin-top: 10px; /* Ajustez pour descendre uniquement "Aide & FAQ" */
+}
+
+/* Réseaux sociaux */
+.footer-reseaux {
+    display: flex !important;
+    flex-direction: column; /* Affiche les éléments en colonne */
+    align-items: center; /* Centre horizontalement */
+    justify-content: space-between; /* Espace égal entre les éléments */
+    gap: 2px!important; 
+    position: relative;
+}
+.footer-reseaux p {
+    margin: 0 0 7px; /* Ajoute un espacement entre les éléments */
+}
+
+.footer-reseaux p:last-child {
+    margin-bottom: 0; /* Supprime le margin pour le dernier élément */
+}
+.footer-reseaux p:nth-child(1) {
+    padding-bottom: 5px; /* Ajoute un espace sous le premier élément */
+}
+
+.footer-reseaux p:nth-child(2) {
+    padding-top: 5px; /* Ajoute un espace au-dessus du second élément */
+}
+.footer-reseaux .social-text {
+    position: relative;
+    top: -5px; /* Monte légèrement uniquement le texte */
+}
+
+/* Logo */
+.footer-logo-section {
+    text-align: center; /* Centre horizontalement le contenu */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre horizontalement */
+    margin-bottom: 0; /* Pas d'espace excessif sous la section */
+}
+
+.footer-logo {
+    max-width: 330px; /* Taille maximale du logo */
+    margin-bottom: 10px; /* Espace entre le logo et le texte RGPD */
+}
+
+/* RGPD */
+.footer-rgpd {
+    margin-top: 0px; /* Ajuste l'espacement entre le logo et le texte */
+    font-size: 0.9rem; /* Taille du texte */
+    color: rgb(246, 213, 213); /* Couleur du texte */
+    text-decoration: underline; /* Souligne le texte */
+    text-align: center; /* Centre le texte */
+}
+.footer-rgpd a {
+    font-size: 0.9rem; /* Taille du texte RGPD */
+    color: rgb(248, 217, 217); /* Couleur du texte */
+    text-decoration: underline; /* Souligne le texte */
+}
+
+/* Titres des colonnes */
+.footer-info-section h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Texte des colonnes */
+.footer-info-section p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* Réseaux sociaux */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+    vertical-align: middle; /* Aligne avec le texte */
+}
+
+/* Supprime les soulignements des liens */
+.footer-info-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-info-section a:hover {
+    color: #f9dede; /* Change la couleur au survol */
+}
+
+.footer-info-section .footer-reseaux,
+.footer-info-section .footer-service,
+.footer-info-section .footer-contact {
+    padding: 0 10px; /* Ajoute un espacement horizontal */
+}
+
+/* Grands écrans */
+@media (min-width: 992px) {
+    .footer-info-section .row {
+        justify-content: space-around; /* Uniformise les colonnes */
+    }
+}
+/* Mention légale */
+.footer-legal-section {
+    background-color: #A07E7E; /* Couleur légèrement plus foncée */
+    text-align: center;
+    padding: 10px 0; /* Ajuste l'épaisseur */
+    font-size: 0.9rem; /* Taille du texte */
+    font-weight: normal; /* Supprime le gras */
+    width: 100vw; /* Prend toute la largeur de l'écran */
+    margin-left: calc((100% - 100vw) / 2); /* Centre horizontalement */
+    margin-right: calc((100% - 100vw) / 2); /* Ajoute une marge à droite symétrique */
+    position: relative;
+  }
+  
+  .footer-legal-section a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .footer-legal-section a:hover {
+    color: #f9dede; /* Couleur plus claire au survol */
+  }
+
+/*PHP*/ : 
+AJOUTER function shedrive_enqueue_styles() {
+    wp_enqueue_style('shedrive-footer-styles', get_template_directory_uri() . '/css/footer.css', [], '1.0.0', 'all'); // Assurez-vous de mettre le chemin correct
+}
+add_action('wp_enqueue_scripts', 'shedrive_enqueue_styles');
+
+<footer>
+    <!-- Section Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Inscrivez-vous à notre Newsletter</h2>
+            <p>Ne manquez rien ! Recevez les dernières infos et restez connectée avec la communauté SheDrive.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Votre email" required>
+                <button type="submit" class="btn btn-newsletter">></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section Informations -->
+    <div class="footer-info-section">
+        <div class="container">
+            <div class="footer-content d-flex justify-content-between align-items-start">
+                <!-- Logo -->
+                <div class="footer-logo-section">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/logo-sitewebSD.png'); ?>" alt="SheDrive Logo" class="footer-logo">
+                    <p class="footer-rgpd">
+                        <a href="<?php echo esc_url(home_url('/rgpd')); ?>">Règlement RGPD et protection des données</a>
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h5>CONTACT</h5>
+                    <p><a href="mailto:support@shedrive.be">support@shedrive.be</a></p>
+                </div>
+
+                <!-- Service Client -->
+                <div class="footer-service">
+                    <h5>SERVICE CLIENT</h5>
+                    <p><a href="<?php echo esc_url(home_url('/contact')); ?>">Contact</a></p>
+                    <p><a href="<?php echo esc_url(home_url('/faq')); ?>">Aide & FAQ</a></p>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div class="footer-reseaux">
+                    <h5>RÉSEAUX</h5>
+                    <div class="social-links">
+                        <p>
+                            <a href="https://instagram.com/shedrive_be" target="_blank" class="d-flex align-items-center">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/icone-instagram.png'); ?>" alt="Instagram" class="social-icon">
+                                @shedrive_be
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://facebook.com/shedrive_fc" target="_blank" class="d-flex align-items-center">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/images/icone-facebook.png'); ?>" alt="Facebook" class="social-icon">
+                                @shedrive_fc
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mention Légale -->
+    <div class="footer-legal-section">
+        © SheDrive - Tous droits réservés.
+    </div>
+</footer>

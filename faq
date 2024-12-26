@@ -1,0 +1,343 @@
+/*HTML*/
+
+<body class="faq-page">
+    <header class="container mt-4">
+        <h1 class="text-center">AIDE & FAQ</h1>
+        <p class="text-center">
+            Bienvenue dans notre centre d’aide ! Vous trouverez ici les réponses aux questions fréquentes ainsi que des outils pour vous guider dans l’utilisation de SheDrive.
+        </p>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Section: Questions générales -->
+        <h2 class="mt-4">QUESTIONS GÉNÉRALES</h2>
+        <div class="accordion" id="generalAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        Qu’est-ce que SheDrive ?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#generalAccordion">
+                    <div class="accordion-body">
+                        SheDrive est une plateforme de covoiturage dédiée aux femmes, offrant un environnement sécurisé et convivial pour organiser des trajets entre conductrices et passagères.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Comment m’inscrire ?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#generalAccordion">
+                    <div class="accordion-body">
+                        Pour vous inscrire, cliquez sur "Inscription" sur la page d'accueil. Renseignez vos informations personnelles, vérifiez votre adresse e-mail, et vous pourrez commencer à utiliser la plateforme.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        Comment fonctionne la vérification d’identité ?
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#generalAccordion">
+                    <div class="accordion-body">
+                        La vérification d’identité se fait via un processus sécurisé. Vous devrez fournir une pièce d’identité officielle pour que votre profil soit validé.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Quelles sont les politiques de vérification pour les femmes transgenres ?
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#generalAccordion">
+                    <div class="accordion-body">
+                        Nous incluons toutes les femmes, y compris les femmes transgenres. Les mêmes politiques de vérification d’identité s’appliquent, et nous encourageons un environnement inclusif et respectueux.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Utilisation de la plateforme -->
+        <h2 class="mt-5">UTILISATION DE LA PLATEFORME</h2>
+        <div class="accordion" id="platformAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Comment rechercher un trajet ?
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#platformAccordion">
+                    <div class="accordion-body">
+                        Les conductrices peuvent publier un trajet directement depuis leur espace personnel sur la page “Publier un trajet”.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        Comment publier un trajet ?
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#platformAccordion">
+                    <div class="accordion-body">
+                        Les utilisatrices peuvent rechercher un trajet sur la page “Trajets”, où un système de filtres est disponible pour affiner les résultats selon leurs préférences 
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        Comment contacter une conductrice ou une passagère ?
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#platformAccordion">
+                    <div class="accordion-body">
+                        Une fois un trajet réservé, vous pouvez utiliser le chat intégré pour contacter la conductrice ou la passagère.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Sécurité et confidentialité -->
+        <h2 class="mt-5">SÉCURITÉ ET CONFIDENTIALITÉ</h2>
+        <div class="accordion" id="securityAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        Quelles sont les mesures de sécurité mises en place ?
+                    </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#securityAccordion">
+                    <div class="accordion-body">
+                        SheDrive garantit un environnement sûr grâce à la vérification des profils des utilisatrices et la modération des trajets et des évaluations. 
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        Comment signaler un problème ou un comportement inapproprié ?
+                    </button>
+                </h2>
+                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#securityAccordion">
+                    <div class="accordion-body">
+                        Vous pouvez signaler un problème via l’onglet "Signaler un problème" sur votre tableau de bord. Tous les signalements sont pris en compte rapidement.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Assistance techniques -->
+        <h2 class="mt-5">ASSISTANCE TECHNIQUES</h2>
+        <div class="accordion" id="technicalAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        Je n’arrive pas à me connecter, que faire ?
+                    </button>
+                </h2>
+                <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#technicalAccordion">
+                    <div class="accordion-body">
+                        Vérifiez que votre adresse e-mail et votre mot de passe sont corrects. Si le problème persiste, utilisez l’option "Mot de passe oublié".
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        Que faire si j’ai oublié mon mot de passe ?
+                    </button>
+                </h2>
+                <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#technicalAccordion">
+                    <div class="accordion-body">
+                        Cliquez sur "Mot de passe oublié" sur la page de connexion et suivez les instructions pour réinitialiser votre mot de passe.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        Comment mettre à jour mes informations personnelles ?
+                    </button>
+                </h2>
+                <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#technicalAccordion">
+                    <div class="accordion-body">
+                        Allez dans votre tableau de bord, cliquez sur "Profil", puis sur "Modifier". Vous pourrez alors mettre à jour vos informations.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>© 2024 SheDrive - Tous droits réservés</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+/*CSS*/
+
+/* Conteneur de la FAQ */
+.faq-page .accordion-item {
+    margin-bottom: 0px;
+    border-radius: 12px; /* Bords arrondis */
+    overflow: hidden;
+    background-color: #f7dae4; /* Couleur de fond douce */
+    border: 1px solid #e3cbbf; /* Bordure subtile */
+}
+
+/* Boutons de la FAQ */
+.faq-page .accordion-button {
+    background-color: #fefcfb; /* Fond du bouton */
+    color: #2f251f; /* Couleur du texte */
+    font-size: 18px;
+    padding: 15px 20px;
+    border-radius: 12px; /* Bords arrondis pour correspondre */
+    text-align: left;
+    outline: none; /* Supprime tout contour */
+    transition: background-color 0.3s ease; /* Transition uniquement pour la couleur */
+   
+}
+.faq-page .accordion-button:hover,
+.faq-page .accordion-button:focus {
+    background-color: #fefcfb; /* Conserve un style propre */
+    border-color: transparent; /* Supprime la bordure colorée */
+}
+
+/* Corps de l'accordéon */
+.faq-page .accordion-body {
+    background-color: #fefcfb; /* Fond clair pour le contenu */
+    color: #4a4a4a; /* Couleur du texte */
+    font-size: 16px;
+    padding: 15px 20px;
+    border-top: 1px solid #eedad1; /* Séparateur subtil entre le bouton et le contenu */
+    border-radius: 0 0 12px 12px; /* Arrondi en bas uniquement */
+}
+/* Ajuste les titres pour qu'ils soient alignés avec les accordions */
+.faq-page h2 {
+    max-width: 900px; /* Même largeur que les accordions */
+    margin-left: auto; /* Centre la largeur du bloc */
+    margin-right: auto; /* Centre la largeur du bloc */
+    padding-left: 15px; /* Alignement avec le contenu des accordions */
+    text-align: left; /* Texte aligné à gauche */
+    color: #4F3D37 !important; /* Remplacez cette valeur par la couleur souhaitée */ /* Remplacez cette valeur par la couleur souhaitée */
+}
+/* Ajoute un espace uniquement entre le titre et la première question */
+.faq-page h2 + .accordion {
+    margin-top: 35px; /* Ajustez la valeur selon vos préférences */
+}
+/* Réduction de la largeur des accordions */
+.faq-page .accordion {
+    max-width: 900px; /* Ajustez cette valeur pour contrôler la largeur */
+    margin: 0 auto; /* Centre les accordions */
+}
+
+
+@media (max-width: 768px) {
+    .faq-page .accordion {
+        max-width: 90%; /* Laisse de l'espace sur les côtés pour les petits écrans */
+    }
+}
+
+/*PHP*/
+<?php
+/* Template Name: FAQ Page */
+get_header(); // Inclut le header WordPress
+?>
+
+<body class="faq-page">
+    <header class="container mt-4">
+        <h1 class="text-center">AIDE & FAQ</h1>
+        <p class="text-center">
+            Bienvenue dans notre centre d’aide ! Vous trouverez ici les réponses aux questions fréquentes ainsi que des outils pour vous guider dans l’utilisation de SheDrive.
+        </p>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Section: Questions générales -->
+        <h2 class="mt-4">QUESTIONS GÉNÉRALES</h2>
+        <div class="accordion" id="generalAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        Qu’est-ce que SheDrive ?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#generalAccordion">
+                    <div class="accordion-body">
+                        SheDrive est une plateforme de covoiturage dédiée aux femmes, offrant un environnement sécurisé et convivial pour organiser des trajets entre conductrices et passagères.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        Comment m’inscrire ?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#generalAccordion">
+                    <div class="accordion-body">
+                        Pour vous inscrire, cliquez sur "Inscription" sur la page d'accueil. Renseignez vos informations personnelles, vérifiez votre adresse e-mail, et vous pourrez commencer à utiliser la plateforme.
+                    </div>
+                </div>
+            </div>
+            <!-- Ajoutez les autres questions ici en utilisant la même structure -->
+        </div>
+
+        <!-- Section: Utilisation de la plateforme -->
+        <h2 class="mt-5">UTILISATION DE LA PLATEFORME</h2>
+        <div class="accordion" id="platformAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Comment rechercher un trajet ?
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#platformAccordion">
+                    <div class="accordion-body">
+                        Les utilisatrices peuvent rechercher un trajet sur la page "Trajets", où un système de filtres est disponible pour affiner les résultats selon leurs préférences.
+                    </div>
+                </div>
+            </div>
+            <!-- Ajoutez les autres questions ici -->
+        </div>
+
+        <!-- Ajoutez les autres sections ici -->
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>© <?php echo date('Y'); ?> SheDrive - Tous droits réservés</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<?php get_footer(); // Inclut le footer WordPress ?>
+
+Instructions pour utiliser le code :
+	1.	Créez un fichier PHP pour le template :
+	•	Créez un fichier nommé page-faq.php dans le dossier de votre thème WordPress (/wp-content/themes/votre-theme).
+	2.	Ajoutez le CSS :
+	•	Placez le code CSS donné dans votre fichier style.css ou dans un fichier CSS séparé que vous importez dans votre thème.
+	•	Si vous utilisez un fichier séparé, incluez-le dans le functions.php comme suit :
+ function enqueue_faq_styles() {
+    wp_enqueue_style('faq-styles', get_template_directory_uri() . '/css/faq.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_faq_styles');
+	3.	Ajoutez la page FAQ dans WordPress :
+	•	Dans le tableau de bord WordPress, allez dans Pages > Ajouter une page.
+	•	Nommez la page “FAQ” et attribuez-lui le template “FAQ Page” depuis la section Attributs de la page.
+	4.	Ajoutez Bootstrap si nécessaire :
+	•	Si votre thème n’inclut pas Bootstrap, ajoutez-le dans le fichier functions.php :
+ function enqueue_bootstrap() {
+    wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap');

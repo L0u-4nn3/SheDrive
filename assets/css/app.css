@@ -1,67 +1,241 @@
-body {
-    margin: 0; /* pour éviter d'avoir une bordure blanche autour de notre contenu */
-    font-family: Arial, Helvetica, sans-serif; /* je choisi une font */
-  }
-  
-  header.header > a.logo {
-    width: 150px;
-    display: block;
-    margin: 0 auto; /* on centre le logo */
-  }
-  
-  header.header > a.logo > img {
-    width: 50%;
-  }
-  
+ 
   body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: 'Hubballi';
       color: #4d4d4d;
       background-color: #fff;
   }
-  header {
-      background-color: #D4A5B0;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  header nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-  }
-  header img {
-      max-width: 50px;
-  }
-  .banniere {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #f8f5f6;
-      padding: 100px;
-  }
-  .banniere h1 {
-      font-size: 2.5em;
-      color: #4d4d4d;
-  }
-  .banniere button {
-      background-color: #C79DA6;
-      color: white;
-      border: none;
-      padding: 10px 50px;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: bold;
-  }
-  .baniere img {
-      max-width: 40%;
-      border-radius: 8px;
-  }
+ 
+/* Navbar principale */
+.custom-navbar {
+    background-color: #d8b1b6; /* Rose pâle */
+    padding: 5px 20px; /* Padding horizontal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Sépare le logo et la navigation */
+    align-items: center; /* Aligne verticalement */
+}
 
+.navbar-brand {
+    margin-left: 20px; /* Place le logo légèrement à gauche */
+    flex-shrink: 0; /* Empêche le logo de rétrécir */
+}
+.navbar-brand img {
+    width: 185px; /* Ajustez la largeur du logo */
+    height: auto; /* Conserve les proportions du logo */
+    margin-top: 17px; /* Descend le logo */
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+.navbar-nav {
+    display: flex; /* Active Flexbox pour les liens */
+    justify-content: center; /* Centre les liens horizontalement */
+    flex-grow: 1; /* Permet au menu de s'étendre pour rester centré */
+    gap: 90px;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-5%); /* Décale uniquement les éléments vers la gauche */
+}
+
+.nav-item {
+    margin: 0; /* Ajoute un espacement entre les liens */
+}
+
+.nav-link {
+    color: white; /* Texte blanc */
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none; /* Retire le soulignement */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fcf1f1; /* Couleur au survol */
+    transform: scale(1.1); /* Effet de zoom */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block; /* Affiche le bouton hamburger */
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .navbar-nav {
+        display: none; /* Cache le menu sur mobile */
+        flex-direction: column; /* Alignement vertical */
+        position: absolute;
+        top: 100%; /* Positionné sous la navbar */
+        left: 0;
+        width: 100%;
+        background-color: #d8b1b6; /* Couleur de fond */
+        padding: 10px 0; /* Espacement interne */
+        z-index: 999; /* S'assure que le menu soit au-dessus */
+    }
+
+    .navbar-nav.show {
+        display: flex; /* Affiche le menu */
+    }
+
+    .nav-link {
+        padding: 10px 15px; /* Espacement autour des liens */
+        text-align: center; /* Centre le texte */
+    }
+}
+
+  /* Page d'accueil */
+.banniere {
+    display:flex ;
+    justify-content: space-between; /* Garde les colonnes séparées */
+    align-items: center; /* Aligne les éléments verticalement */
+    background-color: #f8f5f6; /* Couleur de fond */
+    padding: 80px 100px; /* Ajuste les marges et l'espacement autour de la bannière */
+    gap: 30px; /* Ajoute un espacement entre les colonnes */
+    border-radius: 15px; /* Ajoute des coins arrondis à la section */
+}
+
+.banniere .logo {
+    margin-top: 20px; /* Fait descendre le logo */
+    display: block;
+    max-width: 100%; /* S'assure que l'image reste responsive */
+}
+
+.banniere h2 {
+    font-size: 2.2rem; /* Ajuste la taille du texte */
+    color: #5a4a4a; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-weight: bold; /* Met le texte en gras */
+    transform: translateX(3px); /* Monte le texte de 10 pixels */
+    transform: translateY(-40px); /* Monte le texte de 10 pixels */
+}
+
+.banniere p {
+    font-size: 1.2rem; /* Taille du texte */
+    color: #4d4d4d; /* Couleur du texte */
+    line-height: 1.8; /* Espace entre les lignes */
+    margin-bottom: 30px; /* Ajoute un espace sous le paragraphe */
+}
+
+.banniere .btn-faq {
+    background-color: #C79DA6; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none;
+    padding: 10px 30px; /* Réduit l'espacement intérieur */
+    cursor: pointer;
+    border-radius: 10px; /* Coins arrondis */
+    font-size: 1.2rem; /* Taille du texte */
+    transition: all 0.3s ease; /* Animation fluide */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+    position: relative; /* Permet de repositionner le bouton */
+    top: -90px; /* Monte le bouton de 20px */
+    display: inline-block; /* Pour éviter tout comportement indésirable */
+}
+
+.banniere .btn-faq:hover {
+    background-color: #b38f94; /* Couleur survol */
+    transform: scale(1.05); /* Agrandit légèrement */
+}
+
+.banniere .col-6 {
+    flex: 1; /* Permet aux colonnes de s'adapter à l'espace */
+    text-align: left; /* Aligne le texte à gauche */
+    padding: 20px; /* Ajoute un espace intérieur */
+}
+
+/*image principale - page d'acceuil*/
+
+.banniere-image {
+    position: relative; /* Maintient la position relative */
+    left: 0; /* Réinitialise l'espace à gauche */
+    top: -2%; /* Ajuste la position verticale */
+    width: 110%; /* Prend toute la largeur disponible */
+    transform: translateX(9%); /* Décale uniquement les éléments vers la droite */
+    max-width: none; /* Supprime toute restriction de largeur maximale */
+    height: auto; /* Maintient un ratio d'aspect */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les espacements */
+    object-fit: cover; /* Ajuste l'image pour couvrir la zone */
+}
+
+/* Pour un repositionnement sur des écrans plus petits */
+@media (max-width: 768px) {
+    .banniere-image {
+        left: 10px; /* Décalage réduit à droite */
+        top: 5px; /* Décalage réduit vers le bas */
+    }
+
+    .banniere {
+        flex-direction: column; /* Les colonnes s'empilent sur petits écrans */
+        padding: 50px; /* Réduit le padding */
+    }
+
+    .banniere .col-6 {
+        margin-bottom: 20px; /* Espace entre les colonnes */
+        text-align: center; /* Centre les éléments sur petits écrans */
+    }
+
+    .banniere button {
+        font-size: 0.9rem; /* Réduit la taille du bouton sur petits écrans */
+        padding: 10px 20px; /* Ajuste l'espacement intérieur */
+    }
+}
+
+/*LE SAVIEZ-VOUS*/
+
+/* Rectangle vertical à droite du texte */
+.vertical-rectangle {
+    width: 5.8px; /* Largeur du rectangle */
+    height: 90%; /* Hauteur pour couvrir toute la colonne texte */
+    border-radius: 10px; /* Facultatif : coins arrondis */
+    background-color: #d8b1b6; /* Couleur rose pâle */
+    position: absolute;
+    right: -50px; /* Place le rectangle légèrement à droite de la colonne texte */
+    top: 21px; /* Fait descendre le rectangle de 20px */
+}
+.text-large {
+    font-size: 1.4rem !important; /* Forcer la taille */
+    line-height: 1.2; /* Espacement entre les lignes */
+    margin-top: 20px; /* Ajuste la marge supérieure */
+    color:#52383E; /* Couleur du texte */
+    transform: translateX(-7%); /* Décale uniquement les éléments vers la gauche */
+}
+
+.custom-image {
+    max-width: 90%; /* Ajustez la largeur de cette image */
+    transform: translateX(-25%); /* Décale uniquement les éléments vers la gauche */
+    height: auto; /* Maintient le ratio */
+    border-radius: 10px; /* Facultatif : coins arrondis */
+    display: block;
+    margin: 0 auto; /* Centre l'image dans sa colonne */
+}
+
+@media (max-width: 768px) {
+    .text-large {
+        font-size: 1.2rem; /* Ajustement pour les petits écrans */
+    }
+}
+@media (max-width: 768px) {
+    .custom-image {
+        max-width: 150%; /* Ajuste pour les petits écrans */
+        transform: translateX(-15%);
+    }
+}
   .what {
     padding: 100px;
   }
@@ -69,57 +243,277 @@ body {
   .know {
     padding: 100px;
     text-align: center;
+    color: #795950;
   }
 
   .knows {
     padding: 50px;
   }
+  
+ /* LE SAVIEZ-VOUS */
+.did-you-know-section {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 50px 0; /* Espacement vertical */
+}
 
-  .service {
+.did-you-know-section h2 {
+    font-family: 'Hubballi', sans-serif;
+    font-size: 2rem;
+    color: #5b413b;
+    margin-bottom: 85px !important; /* Forcer l'espacement */
+}
+.mb-4 {
+    margin-bottom: 0 !important; /* Annule la marge ajoutée par Bootstrap */
+}
+.image-wrapper {
+    display: flex; /* Utilise Flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin: 0 auto; /* Centre le conteneur */
+    width: 100%; /* Le conteneur prend toute la largeur */
+    border-radius: 15px; /* Coins arrondis */
+}
+
+.image-wrapper img {
+    display: block;
+    transform: scale(1.2); /* Multiplie la taille par 2 */
+    height: auto; /* Maintient les proportions */
+    margin: 0 auto;
+}
+/* Responsive Design */
+@media (max-width: 992px) { /* Écrans moyens et petits */
+    .did-you-know-section h2 {
+        font-size: 1.8rem; /* Réduit légèrement la taille du titre */
+        margin-bottom: 50px; /* Réduit l'espacement */
+    }
+
+    .image-wrapper img {
+        transform: scale(1.1); /* Réduit l'agrandissement */
+    }
+}
+
+@media (max-width: 768px) { /* Tablettes et petits écrans */
+    .did-you-know-section h2 {
+        font-size: 1.6rem; /* Réduit encore plus le titre */
+        margin-bottom: 40px;
+    }
+
+    .image-wrapper img {
+        transform: scale(1); /* Taille normale */
+    }
+}
+
+@media (max-width: 576px) { /* Smartphones */
+    .did-you-know-section h2 {
+        font-size: 1.4rem; /* Réduit la taille du titre pour les petits écrans */
+        margin-bottom: 30px;
+    }
+
+    .image-wrapper img {
+        width: 100%; /* Image occupe toute la largeur disponible */
+        transform: scale(1); /* Désactive l'agrandissement */
+    }
+}
+
+
+  /* Section Services */
+.services-section {
+    padding: 50px 0;
+    background-color: #fff;
     text-align: center;
-    padding: 100px;
-  }
-  .services {
+    margin-top: 2%;
+}
+
+.services-title {
+    font-size: 5rem;
+    color: #5b413b;
+    margin-bottom: 10px;
+}
+.services-section h2 {
+    font-size: 2rem; /* Augmente la taille du titre */
+    font-weight: bold; /* Rendre le titre plus gras */
+    margin-bottom: 35px !important; /* Forcer l'espacement */
+}
+.services-section p {
+    font-size: 1.2rem; /* Augmente la taille du texte */
+    line-height: 1.8; /* Ajoute de l'espacement entre les lignes */
+}
+.services-subtitle {
+    font-size: 1rem;
+    color: #453d3d;
+    margin-bottom: 30px;
+}
+
+.services-cards {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 50px;
-}
-.services div {
-    background-color: #f8f5f6;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    max-width: 250px;
+    justify-content: space-between; /* Ajoute un espace uniforme entre les cartes */
+    flex-wrap: wrap; /* Permet de passer à la ligne sur les petits écrans */
+    gap: 20px; /* Espace horizontal et vertical entre les cartes */
 }
 
-.etape {
-    padding: 100px;
-    text-align: center;
-}
-
-.step {
+.service-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden; /* Empêche les débordements */
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: flex-start; /* Assure que le contenu suit directement l'image */
+    height: 100%;
+    background-color: #e9cdd3; /* Fond uniforme */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
 
-.steps {
-    padding: 50px;
+.service-card img {
+    width: 100%;
+    height: 150px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Ajuste les images au cadre */
 }
 
-.circle {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border: 2px solid #b87a88;
-    color: #b87a88;
-    border-radius: 50%;
-    text-align: center;
+.service-content {
+    background-color: #e9cdd3; /* Fond pastel */
+    padding: 15px; /* Espacement interne */
+}
+
+.service-title {
+    font-size: 1.2rem; /* Taille du titre */
     font-weight: bold;
-    margin-right: 20px;
+    color: #6D4C4C;
+    margin-bottom: 10px;
 }
 
+.service-content p {
+    font-size: 0.9rem; /* Taille du texte */
+    color: #555;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(50% - 20px); /* Deux cartes par ligne */
+    }
+}
+
+@media (max-width: 576px) {
+    .service-card {
+        width: 100%; /* Une seule carte par ligne */
+    }
+}
+  
+/* Titre */
+.timeline-section h2 {
+    font-size: 2rem; /* Garder la taille du texte */
+    color: #6D4C4C; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin-top: -30px; /* Ajustez cette valeur pour faire monter le titre */
+    margin-bottom: 50px; /* Garder l'espacement en bas */
+}
+.timeline-section .highlight {
+    color: #C38989; /* Couleur rose pour "SheDrive" */
+}
+.timeline-section {
+    display: flex;
+    align-items: flex-start; /* Alignement des éléments en haut */
+    gap: 30px; /* Espacement entre la ligne de temps et le texte */
+}
+/* Ligne de temps (image) */
+.timeline-image {
+    width: 400px; /* Largeur fixe */
+    height: 900px; /* Hauteur fixe */
+    object-fit: contain; /* Ajuste l'image sans déformation */
+    display: block;
+}
+
+.timeline-title {
+    margin-top: -80px; /* Ajustez selon vos besoins */
+    margin-bottom: 40px;
+}
+
+/* Texte des étapes */
+.timeline-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Répartit le texte pour qu'il corresponde à la ligne */
+    height: 900px; /* S'ajuste à la hauteur de la ligne de temps */
+    margin-left: 20px; /* Espacement entre la ligne de temps et le texte */
+}
+.timeline-text .step-content {
+    flex: 1; /* Répartit chaque étape de manière égale */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement le texte */
+}
+.timeline-text h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6D4C4C;
+    margin-bottom: 10px;
+}
+.timeline-text p {
+    font-size: 1rem;
+    color: #555;
+}
+.timeline-illustration {
+    width: auto; /* Permet à la largeur de s'adapter */
+    max-width: 700px; /* Limite la largeur maximale */
+    height: auto; /* Garde les proportions de l'image */
+    max-height: 700px; /* Limite la hauteur maximale */
+    margin: 0 auto; /* Centre l'image dans la colonne */
+    display: block; /* Assure un alignement correct */
+    transform: translateX(71%);
+}
+@media (max-width: 768px) {
+    .timeline-section {
+        display: flex;
+        flex-direction: column; /* Aligne tous les éléments en colonne */
+        align-items: center; /* Centre le contenu */
+        padding: 20px; /* Réduit le padding */
+        gap: 20px; /* Ajoute un espacement entre les éléments */
+    }
+
+    /* Titre */
+    .timeline-section h2 {
+        font-size: 1.5rem; /* Taille réduite pour le titre */
+        text-align: center;
+        margin-bottom: 30px; /* Ajuste l'espacement en bas */
+    }
+
+    /* Ligne de temps (image des étapes) */
+    .timeline-image {
+        width: 100%; /* Largeur pleine */
+        max-width: 300px; /* Largeur maximale pour rester proportionnée */
+        height: auto; /* Conserve les proportions */
+    }
+
+    /* Texte des étapes */
+    .timeline-text {
+        text-align: left; /* Aligne le texte à gauche */
+        margin: 0; /* Supprime la marge externe */
+        padding: 10px; /* Ajoute de l'espace autour du texte */
+    }
+    .timeline-text .step-content {
+        margin-bottom: 20px; /* Espacement entre chaque étape */
+    }
+    .timeline-text h5 {
+        font-size: 1rem; /* Réduit la taille du titre des étapes */
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .timeline-text p {
+        font-size: 0.9rem; /* Réduit la taille du texte des étapes */
+        color: #555;
+    }
+
+    /* Illustration à droite (courbe ou flèche) */
+    .timeline-illustration {
+        width: 80%; /* Largeur réduite */
+        max-width: 200px; /* Largeur maximale */
+        height: auto; /* Conserve les proportions */
+        margin: 0 auto; /* Centre l'image */
+        display: block; /* S'assure que l'image s'affiche correctement */
+    }
+}
 .content h2 {
     font-size: 18px;
     color: #4a4a4a;
@@ -141,75 +535,678 @@ body {
     text-align: left;
 }
 
-.temoignages {
-    text-align: center;
-    padding: 80px;
+/* Section de contact */
+.contact-section {
+    background-color: #ffffff;
+    padding: 40px 20px; /* Ajoute un espacement global à la section */
+    margin-top: 80px; 
+    padding-bottom: 50px;
 }
-
-.coordonnees {
-    text-align: center;
-    padding: 80px;
-}
-
-.coordonnee {
-    text-align: left;
-    padding: 50px;
-}
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    background-color: #A68585;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-section h2 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #fff; /* Texte en blanc */
-}
-
-.footer-section p,
-.footer-section ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 14px;
-}
-
-.footer-section a {
+  
+  .contact-info h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6D4C4C;
+    margin-bottom: 10px; /* Ajoute un espace sous chaque titre */
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px; /* Espacement entre chaque paragraphe */
+  }
+  
+  .faq-text {
+    font-size: 0.95rem;
+    color: #6D4C4C;
+  }
+  
+  .btn-faq {
+    background-color: #D8B1B6!important;
+    color: white!important;
+    padding: 10px 20px;
+    border-radius: 8px;
     text-decoration: none;
-    color: #e4e4e4; /* Gris clair */
-    transition: color 0.3s;
+    font-weight: bold;
+    margin-top: 30px; /* Espacement au-dessus du bouton */
+  }
+  
+  .btn-faq:hover {
+    background-color: #C38989!important;
+    color: white!important;
+  }
+  
+  /* Formulaire */
+  .contact-form .form-group label {
+  margin-bottom: 20px !important; /* Espacement entre les champs du formulaire */
+ }
+ .contact-section .contact-form .form-group {
+    margin-bottom: 20px !important;
+}
+.contact-section h2 {
+    font-family: 'Hubballi'; /* Police élégante */
+    font-size: 2rem; /* Taille du titre */
+    font-weight: bold;
+    color: #6D4C4C; /* Couleur du texte */
+    text-align: center; /* Centre le titre */
+    margin-bottom: 100px !important; /* Ajoute un espace sous le titre */
+    margin-top: -50px !important; /* Ajustez pour contrôler l'espace au-dessus */
 }
 
-.footer-section a:hover {
-    color: #ffffff; /* Blanc au survol */
-    text-decoration: underline;
-}  
+  .contact-form .form-control {
+    border: 1px solid #C38989!important;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin-bottom: 20px !important;
+  }
+  
+  .contact-form .form-control:focus {
+    border-color: #D8B1B6;
+    box-shadow: none;
+  }
+  .btn-send {
+    background-color: #D8B1B6 !important;
+    color: white!important;
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 50px; /* Espacement au-dessus du bouton d’envoi */
+  }
+  
+  .btn-send:hover {
+    background-color: #C38989!important;
+    color: white!important;
+  }
 
-.copywrite {
-    background-color: #e9bfbf;
-    font-size: 10px;
-    color: #ffffff;
+
+/* Section des témoignages */
+.testimonial-section {
+    background-color: #ffffff; /* Fond clair */
+  }
+
+  .testimonial-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 100px !important; /* Ajoute un espace sous le titre */
+    margin-top: -60px !important; /* Ajustez pour contrôler l'espace au-dessus */
+    font-weight: bold;
+    color: #6D4C4C;
+  }
+  .testimonial-section .highlight {
+    color: #C38989; /* Couleur rose */
+  }
+  /* Styliser les images du carousel */
+  .testimonial-image {
+    max-width: 1100px; /* Limite la largeur maximale */
+    max-height: 900px; /* Limite la hauteur maximale */
+    width: auto; /* Ajuste la largeur proportionnellement */
+    height: auto; /* Ajuste la hauteur proportionnellement */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    display: block; /* Garantit un bon positionnement */
+    object-fit: contain; /* Garde les proportions sans déformation */
+    border-radius: 15px; /* Ajoute des coins arrondis */
+  }
+  /* Flèches du carousel */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    border-radius: 100%; /* Rendre les flèches circulaires */
+    width: 40px;
+    height: 40px;
+  }
+
+
+
+
+/* Section Notre Histoire */
+.about-shedrive .container {
+    max-width: 900px; /* Largeur maximale */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 2rem 0; /* Espacement vertical */
+}
+
+.about-shedrive h1 {
+    font-family: 'Hubballi', sans-serif; /* Police pour le titre */
+    margin-top: 7%;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-align: center; /* Centrer le titre */
+    margin-bottom: 5rem;
+}
+
+.about-shedrive .row {
+    display: flex; /* Flexbox pour aligner image et texte */
+    align-items: center; /* Aligne verticalement */
+    gap: 2rem; /* Espace horizontal entre les colonnes */
+}
+
+.about-shedrive img {
+    max-width: 100%; /* Ajuste à la largeur du conteneur */
+    height: auto; /* Garde les proportions */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.about-shedrive p {
+    font-size: 1.2rem; /* Taille du texte */
+    line-height: 1.2; /* Espacement entre les lignes */
+    color: #4a4a4a; /* Couleur du texte */
+    text-align: justify; /* Justifie le texte */
+    margin-bottom: 1rem;
+    width: 95%; /* Largeur maximale pour "élargir" légèrement */
+    transform: scaleX(1.1); /* Étire horizontalement de 10% */
+    display: inline-block; /* Nécessaire pour que scaleX fonctionne correctement */
+    max-width: 550px;
+}
+
+/* Bannière */
+.banner-image {
+    position: relative;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner-image .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+}
+
+.banner-image h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.team-section {
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    padding: 8px;
+    color: #4a4a4a;
+}
+
+.team-section h1 {
+    font-family: 'Hubballi', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 4rem; /* Plus d'espace sous le titre principal */
+    margin-top: -5rem;
+   
+}
+.team-section h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #52383E;
+    text-align: center;
+    margin-bottom: 5rem; /* Augmente l'espace sous le sous-titre */
+}
+.team-section .intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 6rem; /* Ajoute plus d'espace au-dessus du texte d'intro */
+    margin-bottom: 3rem; /* Espace entre l'intro et le sous-titre */
+    color: #52383E;
+}
+
+.team-section .subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-weight: bold;
+    color: #52383E;
+    margin-bottom: 10rem; /* Espace entre l'intro et le sous-titre */
+}
+
+.team-section .team-image img {
+    border-radius: 10px;
+    max-width: 70%; /* Ajuste la taille de l'image */
+    margin-bottom: 3rem; /* Espace sous l'image */
+    margin-top: 1.5rem; /* Ajoute un espace au-dessus des images */
+}
+
+.team-section .team-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 2rem; /* Espace supplémentaire au-dessus du texte final */
+    margin-bottom: 0;
+    color: #52383E;
+}
+/* Section Nos Missions */
+.missions-section {
+    font-family: 'Hubballi', sans-serif;
+}
+
+.missions-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3d2222;
+    margin-bottom: 3rem;
+}
+
+.missions-section .intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #52383E;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.missions-list {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4A4A4A;
+    margin-top: 4rem;
+}
+
+.missions-list strong {
+    font-size: 1.2rem;
+    color: #622f3b;
+}
+
+.missions-list li {
+    margin-bottom: 2.5rem; /* Espace entre chaque mission */
+}
+
+.missions-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Facultatif pour un style plus arrondi */
+}
+/* Espacement général */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 2rem;
+}
+
+
+/* Conteneur de la FAQ */
+.faq-page .accordion-item {
+    margin-bottom: 0px;
+    border-radius: 12px; /* Bords arrondis */
+    overflow: hidden;
+    background-color: #f7dae4; /* Couleur de fond douce */
+    border: 1px solid #e3cbbf; /* Bordure subtile */
+}
+/* Boutons de la FAQ */
+.faq-page .accordion-button {
+    background-color: #fefcfb; /* Fond du bouton */
+    color: #2f251f; /* Couleur du texte */
+    font-size: 18px;
+    padding: 15px 20px;
+    border-radius: 12px; /* Bords arrondis pour correspondre */
+    text-align: left;
+    outline: none; /* Supprime tout contour */
+    transition: background-color 0.3s ease; /* Transition uniquement pour la couleur */
+   
+}
+.faq-page .accordion-button:hover,
+.faq-page .accordion-button:focus {
+    background-color: #fefcfb; /* Conserve un style propre */
+    border-color: transparent; /* Supprime la bordure colorée */
+}
+/* Corps de l'accordéon */
+.faq-page .accordion-body {
+    background-color: #fefcfb; /* Fond clair pour le contenu */
+    color: #4a4a4a; /* Couleur du texte */
+    font-size: 16px;
+    padding: 15px 20px;
+    border-top: 1px solid #eedad1; /* Séparateur subtil entre le bouton et le contenu */
+    border-radius: 0 0 12px 12px; /* Arrondi en bas uniquement */
+}
+/* Ajuste les titres pour qu'ils soient alignés avec les accordions */
+.faq-page h2 {
+    max-width: 900px; /* Même largeur que les accordions */
+    margin-left: auto; /* Centre la largeur du bloc */
+    margin-right: auto; /* Centre la largeur du bloc */
+    padding-left: 15px; /* Alignement avec le contenu des accordions */
+    text-align: left; /* Texte aligné à gauche */
+    color: #4F3D37 !important; /* Remplacez cette valeur par la couleur souhaitée */ /* Remplacez cette valeur par la couleur souhaitée */
+}
+/* Ajoute un espace uniquement entre le titre et la première question */
+.faq-page h2 + .accordion {
+    margin-top: 35px; /* Ajustez la valeur selon vos préférences */
+}
+/* Réduction de la largeur des accordions */
+.faq-page .accordion {
+    max-width: 900px; /* Ajustez cette valeur pour contrôler la largeur */
+    margin: 0 auto; /* Centre les accordions */
+}
+@media (max-width: 768px) {
+    .faq-page .accordion {
+        max-width: 90%; /* Laisse de l'espace sur les côtés pour les petits écrans */
+    }
+}
+
+.form-upload {
+    font-family: Arial, sans-serif;
+    color: #915858; /* Couleur de texte */
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .upload-container {
+    border: 2px dashed #915858;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .upload-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #915858;
+    cursor: pointer;
+  }
+  
+  .upload-label .camera-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .upload-input {
+    display: none; /* Masque l'input de fichier */
+  }
+  
+  .upload-container p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  .upload-container small {
+    display: block;
+    font-size: 0.8rem;
+    color: #915858;
+  }
+  
+  .info-text {
+    color: #915858;
+    font-size: 0.9rem;
+    margin: 15px 0;
+  }
+  
+  /* Checkbox et termes */
+  .terms-container {
+    display: flex;
+    margin: 15px 0;
+  }
+  
+  .terms-container input {
+    margin-right: 10px;
+  }
+  
+  .terms-container label {
+    font-size: 0.9rem;
+    color: #915858;
+  }
+  
+  .terms-container a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #915858;
+  }
+  
+  .terms-container a:hover {
+    text-decoration: underline;
+  }
+
+/* Styles pour la page Proposez votre trajet */
+/* Conteneur du formulaire */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #52383E; /* Couleur personnalisée */
+    margin-bottom: 20px; /* Espace sous le titre */
+    margin-top: 7px; /* Espace au-dessus */
+    text-transform: uppercase; /* Texte en majuscules */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+}
+
+.form-container {
+    background-color: #F7F1F2; /* Fond rose clair */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px; /* Augmente le padding pour une longueur plus grande */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* Texte noir pour tous les champs du formulaire */
+.form-container input,
+.form-container input,
+.form-container input,
+.form-container select,
+.form-container textarea {
+    color: #A6908C !important; /* Forcer le texte en noir */
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+/* Couleur noire pour les placeholders */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: #A6908C !important; /* Placeholder en noir */
+    opacity: 1; /* Assure que les placeholders ne soient pas translucides */
+}
+/* Focus propre pour les champs */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    color: #A6908C !important; /* Texte en noir au focus */
+    border-color: #BC929C; /* Douce bordure pour le focus */
+    box-shadow: none;
+}
+/* Champs du formulaire */
+.input-field {
+    border: 1px solid #BC929C;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    color: #A6908C !important; /* Force le texte noir */
+    font-size: 14px;
+    background-color: #fefcfb;
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* Garde les autres champs cohérents */
+}
+/* Champ "Nombre de places" plus long */
+.select-field {
+    width: 100%; /* S'étend sur toute la largeur de sa colonne */
+    max-width: 100%; /* Empêche un débordement */
+}
+/* Espacement entre les champs */
+.row.g-3 .col-md-6 + .col-md-12 {
+    margin-top: 20px; /* Espace entre "Nombre de places" et "Informations complémentaires" */
+}
+/* Bouton Publier */
+.submit-button {
+    background-color: #BC929C;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    display: block; /* Force le bouton à occuper une ligne seule */
+    margin: 20px auto 0 auto; /* Centre le bouton sous le formulaire */
+    width: 150px; /* Ajuste la taille du bouton */
+    text-align: center;
+}
+.submit-button:hover {
+    background-color: #BC929C;
+    color: #ffffff;
+}
+
+.title {
+    color: #795950;
+}
+/*Rechercher Trajet*/
+
+.search-section h2 {
+    font-family: 'Hubballi', sans-serif;
+    font-weight: bold;
+    color: #52383E;
+    margin-bottom: 20px; /* Ajoute un espace entre le titre et le sous-titre */
+    margin-top: 20px; /* Ajoute un espace au-dessus du titre */
+}
+.section-title {
+    margin-top: 100px; /* Espace au-dessus du titre */
+    margin-bottom: 30px; /* Espace en dessous du titre */
+}
+
+.search-section p {
+    color: #6d6d6d;
+    font-size: 1.1rem;
+    margin-bottom: 30px; /* Ajoute un espace sous le sous-titre */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .form-control {
+    border: 1px solid #d09b9b;
+    border-radius: 5px;
+}
+
+.card .btn-primary:hover {
+    background-color: #c38989;
+}
+.search-section .btn-primary {
+    margin-top: 20px; /* Ajoute un espace au-dessus du bouton */
+    display: block; /* Assure que le bouton reste centré */
+}
+
+
+/*Les trajets proposées*/
+/* Espacement général pour la section des trajets */
+.trajet-page {
+    background-color: #f9f6f6;
+    padding: 50px 0; /* Espacement haut et bas de la section */
+}
+
+/* Titre de la section */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #52383E;
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+/* Description sous le titre */
+.section-description {
+    font-size: 1.2rem;
+    color: #6d6d6d;
+    margin-bottom: 40px; /* Espacement sous la description */
+}
+
+
+/*Les trajets proposées*/
+/* Cartes de trajet */
+.card {
+    background-color: #FFF4F4;
+    border: 1px solid #d5cdcd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacement entre les cartes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px; /* Taille maximale des cartes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image de profil */
+.card img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 90px; /* Taille de l'image */
+    height: 90px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte du profil (nom, âge) */
+.card .text-center strong {
+    font-size: 1rem;
+    color: #52383E;
+}
+
+/* Inputs en lecture seule */
+.card input {
+    border: 1px solid #d8b1b6;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    color: #52383E;
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+.card input[readonly] {
+    cursor: not-allowed;
+    background-color: #f9f9f9;
+}
+
+/* Informations complémentaires */
+.card p {
+    color: #6d6d6d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Bouton Contacter */
+.card .btn {
+    background-color: #d8b1b6;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #c38989;
+    color: white;
+}
+
+/* Espacement des colonnes */
+.card .row .col-md-6 {
+    margin-bottom: 10px;
+}
+
+.card .row .col-md-12 {
+    margin-bottom: 15px;
+}
+
+/* Espacement entre les cartes */
+.trajet-page .card + .card {
+    margin-top: 30px;
+}
+
+/* Grands écrans */
+@media (min-width: 992px) {
+    .card {
+        padding: 30px;
+    }
 }

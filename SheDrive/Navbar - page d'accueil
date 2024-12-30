@@ -1,0 +1,135 @@
+  <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <!-- Logo à gauche -->
+            <a class="navbar-brand" href="#">
+                <img src="" alt="Logo" width="40" height="40">
+            </a>
+            <!-- Bouton pour mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu principal -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4"> <!-- gap pour espacement -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Aide & FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inscription</a>
+                    </li>
+                    <!-- Dropdown pour "Trajet" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="trajetDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trajet
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="trajetDropdown">
+                            <li><a class="dropdown-item" href="#">Proposer un trajet</a></li>
+                            <li><a class="dropdown-item" href="#">Rechercher un trajet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Icône de connexion à droite -->
+            <div class="d-flex align-items-center">
+                <a href="#" class="nav-link">
+                    <img src="connexion - icone.png" alt="Connexion" width="30" height="30">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+/*CSS*/ 
+
+/* Navbar principale */
+.custom-navbar {
+    background-color: #d8b1b6; /* Rose pâle */
+    padding: 15px 0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre discrète */
+    position: sticky; /* Navbar collante */
+    top: 0; /* Fixe la navbar en haut */
+    z-index: 1000; /* Assure qu'elle reste au-dessus des autres éléments */
+}
+
+/* Liens de navigation */
+.nav-link {
+    color: white !important; /* Texte blanc */
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase; /* Texte en majuscules pour un look moderne */
+    transition: color 0.3s ease, transform 0.3s ease; /* Ajoute une animation fluide */
+    letter-spacing: 0.5px; /* Espacement entre les lettres */
+}
+
+.nav-link:hover {
+    color: #fcf1f1; /* Rose plus clair */
+    transform: scale(1.1); /* Effet de zoom sur le lien */
+}
+
+/* Alignement et espacement des liens */
+.navbar-nav {
+    text-align: center; /* Centre les liens dans la barre */
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Espacement horizontal entre les éléments */
+}
+
+/* Dropdown */
+.dropdown-menu {
+    background-color: #d8b1b6; /* Fond de dropdown */
+    border: none; /* Retire la bordure */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre au menu */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.dropdown-item {
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px; /* Espacement dans le menu */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #b38f94; /* Rose foncé sur hover */
+    color: #fff; /* Texte blanc */
+}
+
+/* Logo et icônes */
+.navbar .nav-link img,
+.navbar-brand img {
+    filter: brightness(0) invert(1); /* Rend les icônes et le logo blancs */
+    max-height: 40px; /* Limite la taille du logo */
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-link img:hover,
+.navbar-brand img:hover {
+    transform: scale(1.2); /* Effet de zoom */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Empile les liens en vertical sur mobile */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0; /* Ajoute de l'espacement vertical */
+    }
+
+    .custom-navbar {
+        padding: 10px 0; /* Réduit le padding pour économiser de l'espace */
+    }
+}

@@ -1,0 +1,215 @@
+body {
+    margin: 0; /* pour éviter d'avoir une bordure blanche autour de notre contenu */
+    font-family: Arial, Helvetica, sans-serif; /* je choisi une font */
+  }
+  
+  header.header > a.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto; /* on centre le logo */
+  }
+  
+  header.header > a.logo > img {
+    width: 50%;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #4d4d4d;
+      background-color: #fff;
+  }
+  header {
+      background-color: #D4A5B0;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+  }
+  header img {
+      max-width: 50px;
+  }
+  .banniere {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f5f6;
+      padding: 100px;
+  }
+  .banniere h1 {
+      font-size: 2.5em;
+      color: #4d4d4d;
+  }
+  .banniere button {
+      background-color: #C79DA6;
+      color: white;
+      border: none;
+      padding: 10px 50px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+  }
+  .baniere img {
+      max-width: 40%;
+      border-radius: 8px;
+  }
+
+  .what {
+    padding: 100px;
+  }
+
+  .know {
+    padding: 100px;
+    text-align: center;
+  }
+
+  .knows {
+    padding: 50px;
+  }
+
+  .service {
+    text-align: center;
+    padding: 100px;
+  }
+  .services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+}
+.services div {
+    background-color: #f8f5f6;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 250px;
+}
+
+.etape {
+    padding: 100px;
+    text-align: center;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.steps {
+    padding: 50px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid #b87a88;
+    color: #b87a88;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.content h2 {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.content p,
+.content ul {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.content ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.temoignages {
+    text-align: center;
+    padding: 80px;
+}
+
+.coordonnees {
+    text-align: center;
+    padding: 80px;
+}
+
+.coordonnee {
+    text-align: left;
+    padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #A68585;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff; /* Texte en blanc */
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #e4e4e4; /* Gris clair */
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ffffff; /* Blanc au survol */
+    text-decoration: underline;
+}  
+
+.copywrite {
+    background-color: #e9bfbf;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+}

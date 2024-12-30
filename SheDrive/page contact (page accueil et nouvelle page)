@@ -1,0 +1,171 @@
+/*HTML*/
+ <section class="contact-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Contactez-nous dès maintenant</h2>
+      <div class="row">
+        <!-- Informations de contact -->
+        <div class="col-lg-6" d-flex flex-column justify-content-center">
+          <div class="contact-info">
+            <h5>NOTRE EMAIL</h5>
+            <p>support-shedrive@gmail.com</p>
+            <h5>INSTAGRAM</h5>
+            <p>@shedrive_be</p>
+            <h5>FACEBOOK</h5>
+            <p>@shedrive_fc</p>
+            <p class="faq-text mt-4">
+              Consultez notre FAQ pour des réponses rapides :
+            </p>
+            <a href="/faq" class="btn btn-faq">FAQ</a>
+          </div>
+        </div>
+        <!-- Formulaire de contact -->
+        <div class="col-lg-6">
+        <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Mail" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-send">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  /*CSS*/
+  
+  /* Section de contact */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px; /* Ajoute un espacement global à la section */
+}
+   .contact-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6D4C4C;
+    margin-bottom: 40px !important; /* Ajoute un espace sous chaque titre */
+  }
+  
+  .contact-info h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6D4C4C;
+    margin-bottom: 10px; /* Ajoute un espace sous chaque titre */
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px; /* Espacement entre chaque paragraphe */
+  }
+  
+  .faq-text {
+    font-size: 0.95rem;
+    color: #6D4C4C;
+  }
+  
+  .btn-faq {
+    background-color: #D8B1B6!important;
+    color: white!important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 60px; /* Espacement au-dessus du bouton */
+  }
+  
+  .btn-faq:hover {
+    background-color: #C38989!important;
+    color: white!important;
+  }
+  
+  /* Formulaire */
+  .contact-form .form-group label {
+  margin-bottom: 20px !important; /* Espacement entre les champs du formulaire */
+ }
+ .contact-section .contact-form .form-group {
+    margin-bottom: 20px !important;
+}
+  .contact-form .form-control {
+    border: 1px solid #C38989!important;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin-bottom: 20px !important;
+  }
+  
+  .contact-form .form-control:focus {
+    border-color: #D8B1B6;
+    box-shadow: none;
+  }
+
+  .btn-send {
+    background-color: #D8B1B6 !important;
+    color: white!important;
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px; /* Espacement au-dessus du bouton d’envoi */
+  }
+  
+  .btn-send:hover {
+    background-color: #C38989!important;
+    color: white!important;
+  }
+
+  /*PHP*/
+ /*ajouter dans function.php: function shedrive_enqueue_styles() {
+    wp_enqueue_style('shedrive-contact', get_template_directory_uri() . '/assets/css/contact.css');
+}
+add_action('wp_enqueue_scripts', 'shedrive_enqueue_styles');*/
+
+<section class="contact-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Contactez-nous dès maintenant</h2>
+        <div class="row">
+            <!-- Informations de contact -->
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <div class="contact-info">
+                    <h5>NOTRE EMAIL</h5>
+                    <p>support-shedrive@gmail.com</p>
+                    <h5>INSTAGRAM</h5>
+                    <p>@shedrive_be</p>
+                    <h5>FACEBOOK</h5>
+                    <p>@shedrive_fc</p>
+                    <p class="faq-text mt-4">
+                        Consultez notre FAQ pour des réponses rapides :
+                    </p>
+                    <a href="<?php echo esc_url(home_url('/faq')); ?>" class="btn btn-faq">FAQ</a>
+                </div>
+            </div>
+            <!-- Formulaire de contact -->
+            <div class="col-lg-6">
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nom" placeholder="Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Mail" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-send">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

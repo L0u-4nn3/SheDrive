@@ -1,0 +1,222 @@
+/*HTML*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposez votre trajet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="trajet-page">
+    <header class="container mt-4 text-center">
+        <h1 class="section-title">PROPOSEZ VOTRE TRAJET</h1>
+        <p class="section-description">
+            Un trajet à proposer ? Indiquez votre itinéraire et laissez les passagères trouver leur place à vos côtés
+        </p>
+    </header>
+
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="form-container p-4">
+            <form>
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-field" placeholder="Point de départ">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control input-field" placeholder="Destination">
+                    </div>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <input type="date" class="form-control input-field">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="time" class="form-control input-field">
+                    </div>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <select class="form-control input-field select-field">
+                            <option selected>Nombre de places</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control input-field" rows="3" placeholder="Informations complémentaires"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn submit-button">Publier</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+/*CSS*/
+
+/* Styles pour la page Proposez votre trajet */
+/* Conteneur du formulaire */
+.form-container {
+    background-color: #F7F1F2; /* Fond rose clair */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px; /* Augmente le padding pour une longueur plus grande */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte noir pour tous les champs du formulaire */
+.form-container input,
+.form-container input,
+.form-container input,
+.form-container select,
+.form-container textarea {
+    color: #A6908C !important; /* Forcer le texte en noir */
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Couleur noire pour les placeholders */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: #A6908C !important; /* Placeholder en noir */
+    opacity: 1; /* Assure que les placeholders ne soient pas translucides */
+}
+
+/* Focus propre pour les champs */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    color: #A6908C !important; /* Texte en noir au focus */
+    border-color: #BC929C; /* Douce bordure pour le focus */
+    box-shadow: none;
+}
+/* Champs du formulaire */
+.input-field {
+    border: 1px solid #BC929C;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    color: #A6908C !important; /* Force le texte noir */
+    font-size: 14px;
+    background-color: #fefcfb;
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* Garde les autres champs cohérents */
+}
+/* Champ "Nombre de places" plus long */
+.select-field {
+    width: 100%; /* S'étend sur toute la largeur de sa colonne */
+    max-width: 100%; /* Empêche un débordement */
+}
+
+/* Espacement entre les champs */
+.row.g-3 .col-md-6 + .col-md-12 {
+    margin-top: 20px; /* Espace entre "Nombre de places" et "Informations complémentaires" */
+}
+
+/* Bouton Publier */
+.submit-button {
+    background-color: #BC929C;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    display: block; /* Force le bouton à occuper une ligne seule */
+    margin: 20px auto 0 auto; /* Centre le bouton sous le formulaire */
+    width: 150px; /* Ajuste la taille du bouton */
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #BC929C;
+    color: #ffffff;
+}
+
+
+
+/*PHP*/
+
+<?php
+// Fonction pour afficher le formulaire
+function shedrive_traject_form() {
+    ob_start(); // Capture le contenu pour le shortcode
+    ?>
+    <div class="trajet-page">
+        <header class="container mt-4 text-center">
+            <h1 class="section-title">PROPOSEZ VOTRE TRAJET</h1>
+            <p class="section-description">
+                Un trajet à proposer ? Indiquez votre itinéraire et laissez les passagères trouver leur place à vos côtés
+            </p>
+        </header>
+
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="form-container p-4">
+                <form>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-field" placeholder="Point de départ">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-field" placeholder="Destination">
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="date" class="form-control input-field">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="time" class="form-control input-field">
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <select class="form-control input-field select-field">
+                                <option selected>Nombre de places</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control input-field" rows="3" placeholder="Informations complémentaires"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn submit-button">Publier</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <?php
+    return ob_get_clean(); // Retourne le contenu pour le shortcode
+}
+
+// Ajouter un shortcode pour le formulaire
+add_shortcode('propose_trajet_form', 'shedrive_traject_form');
+
+function shedrive_enqueue_styles() {
+    // Inclut le fichier CSS du formulaire
+    wp_enqueue_style('shedrive-custom-styles', get_template_directory_uri() . '/styles.css', array(), '1.0', 'all');
+}
+add_action('wp_enqueue_scripts', 'shedrive_enqueue_styles');
+
+/*Utilisation dans WordPress
+	1.	Ajout du formulaire dans une page ou un article :
+	•	Allez dans l’éditeur de WordPress.
+	•	Ajoutez ce shortcode : [propose_trajet_form].
+	2.	Résultat :
+	•	Le formulaire s’affichera avec le style défini.*/

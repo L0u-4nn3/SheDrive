@@ -1,0 +1,106 @@
+/*HTML*/
+<section class="testimonial-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Ce que les autres femmes pensent de <span class="highlight">SheDrive</span></h2>
+      <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="tem1.png" class="d-block w-100 testimonial-image" alt="Témoignage 1">
+          </div>
+          <div class="carousel-item">
+            <img src="tem2.png" class="d-block w-100 testimonial-image" alt="Témoignage 2">
+          </div>
+          <div class="carousel-item">
+            <img src="tem3.png" class="d-block w-100 testimonial-image" alt="Témoignage 3">
+          </div>
+        </div>
+        <!-- Flèches de contrôle -->
+        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Précédent</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Suivant</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+/*PHP*/
+<section class="testimonial-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Ce que les autres femmes pensent de <span class="highlight">SheDrive</span></h2>
+    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Slides dynamiques -->
+      <div class="carousel-inner">
+        <?php
+        // Tableau d'images des témoignages
+        $testimonials = [
+          get_template_directory_uri() . '/assets/images/tem1.png',
+          get_template_directory_uri() . '/assets/images/tem2.png',
+          get_template_directory_uri() . '/assets/images/tem3.png',
+        ];
+        $active = 'active'; // Pour ajouter la classe active au premier élément
+        foreach ($testimonials as $testimonial) : ?>
+          <div class="carousel-item <?php echo $active; ?>">
+            <img src="<?php echo $testimonial; ?>" class="d-block w-100 testimonial-image" alt="Témoignage">
+          </div>
+          <?php $active = ''; // Retirer la classe active après la première image ?>
+        <?php endforeach; ?>
+      </div>
+      <!-- Flèches de contrôle -->
+      <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+/*CSS*/
+/* Section des témoignages */
+.testimonial-section {
+  background-color: #f9f9f9; /* Fond clair */
+}
+
+.testimonial-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6D4C4C;
+}
+
+.testimonial-section .highlight {
+  color: #C38989; /* Couleur rose */
+}
+
+/* Styliser les images du carousel */
+.testimonial-image {
+  max-width: 600px; /* Limite la largeur maximale */
+  max-height: 400px; /* Limite la hauteur maximale */
+  width: auto; /* Ajuste la largeur proportionnellement */
+  height: auto; /* Ajuste la hauteur proportionnellement */
+  margin: 0 auto; /* Centre l'image horizontalement */
+  display: block; /* Garantit un bon positionnement */
+  object-fit: contain; /* Garde les proportions sans déformation */
+  border-radius: 15px; /* Ajoute des coins arrondis */
+}
+
+/* Flèches du carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #6D4C4C; /* Couleur des flèches */
+  border-radius: 50%; /* Rendre les flèches circulaires */
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #C38989; /* Couleur sur hover */
+}
